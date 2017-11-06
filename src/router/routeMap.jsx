@@ -5,6 +5,7 @@ import App from '../containers'
 import Home from '../containers/Home'
 import City from '../containers/City'
 import Login from '../containers/Login'
+import User from '../containers/User'
 class RouteMap extends React.Component{
     render(){
           return(
@@ -13,7 +14,7 @@ class RouteMap extends React.Component{
                       <IndexRoute component={Home}/>
                       <Route path='/city' component={City}/>
                       <Route path='/Login(/:router)' component={Login}/>
-
+                      <Route path='/User' component={User}/>
                   </Route>
               </Router>
                )
