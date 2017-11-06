@@ -23,7 +23,7 @@ class OrderList extends React.Component{
                 <h2>您的订单</h2>
                 {
                     this.state.data.length
-                    ?<OrderListComponent data={this.state.data} submitComment={this.submintComment.bind(this)}/>
+                    ?<OrderListComponent data={this.state.data} submitComment={this.submitComment.bind(this)}/>
                             :<div>{/* loading */}</div>
                 }
             </div>
@@ -51,12 +51,13 @@ class OrderList extends React.Component{
         }).then(json=>{
             this.setState({
                 data:json
-            }).catch(ex=>{
+            })
+        }).catch(ex=>{
                 if(__DEV__){
                     console.error('用户主页“订单列表”获取数据报错, ', ex.message)
                 }
             })
-        })
+
     }
 
     submitComment(id,value,star,callback){

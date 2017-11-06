@@ -62,9 +62,9 @@ class Item extends React.Component {
     }
     componentDidMount() {
         // 将状态维护到 state 中
-        this.setState({
-            commentState: this.props.data.commentState
-        })
+        // this.setState({
+        //     commentState: this.props.data.commentState
+        // })
     }
     showComment() {
         // 显示输入框

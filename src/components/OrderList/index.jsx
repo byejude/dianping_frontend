@@ -11,7 +11,7 @@ class OrderList extends React.Component {
         this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this);
     }
     render() {
-        const data = this.props.data
+        const data = this.props.data;
 
         return (
             <div>

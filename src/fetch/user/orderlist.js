@@ -7,7 +7,7 @@ export function getOrderListData(username){
 }
 
 export function postComment(id,comment,star,token,username) {
-    const result = post('/api/subminComment',{
+    const result = post('/api/submitComment',{
         id:id,
         comment:comment,
         star:star,
