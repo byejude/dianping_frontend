@@ -1,6 +1,6 @@
 import React from 'react'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
-import {Link,hashHistyory} from 'react-router'
+import {Link,hashHistory} from 'react-router'
 import SearchInput from '../SearchInput'
 import './style.less'
 
@@ -28,14 +28,14 @@ class HomeHeader extends React.Component{
                     <div className="search-container">
                         <i className="icon-search"></i>
                         &nbsp;
-                        <SearchInput value="" enterHandle={this.enterHandle.bind(this)}/>
+                        <SearchInput value="" enterHandle={this.enterHandle.bind(this)}/>a
                     </div>
             </div>
             </div>
         )
     }
   enterHandle(e){
-        hashHistyory.push('/search/all/'+encodeURIComponent((e)))
+        hashHistory.push('/search/all/'+encodeURIComponent(e))
   }
 }
 
